@@ -1,4 +1,4 @@
-package com.anylogic.test.entity;
+package com.anylogic.testproject.entity;
 
 import java.util.ArrayList;
 import java.util.List;

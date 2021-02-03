@@ -1,8 +1,9 @@
-package com.anylogic.test.entity;
+package com.anylogic.testproject.entity;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Ticket implements Serializable {
 
@@ -160,9 +161,10 @@ public class Ticket implements Serializable {
 	}
 	@Override
 	public String toString() {
-		return "Ticket [origin=" + origin + ", origin_name=" + origin_name + ", destination=" + destination
-				+ ", destination_name=" + destination_name + ", departure=" + departure + ", arrival=" + arrival
-				+ ", carrier=" + carrier + ", stops=" + stops + ", price=" + price + "]";
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yy HH:mm");
+		return "Ticket [Origin=" + origin + ", Origin name=" + origin_name + ", Destination=" + destination
+				+ ", Destination name=" + destination_name + ", Departure=" + departure.format(formatter) + ", Arrival=" + arrival.format(formatter)
+				+ ", Carrier=" + carrier + ", stops=" + stops + ", price=" + price + "]";
 	}
 	
 	

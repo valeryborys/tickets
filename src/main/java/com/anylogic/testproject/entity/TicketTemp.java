@@ -1,4 +1,4 @@
-package com.anylogic.test.entity;
+package com.anylogic.testproject.entity;
 
 import java.math.BigDecimal;
 
@@ -15,6 +15,7 @@ public class TicketTemp {
 	private String carrier;
 	private int stops;
 	private BigDecimal price;
+	
 	public String getOrigin() {
 		return origin;
 	}
